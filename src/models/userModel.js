@@ -3,7 +3,7 @@ export const getAllUserService = async () => {
   return result;
 };
 
-export const getAllUserByIdService = async (id) => {
+export const getUserByIdService = async (id) => {
   const result = "TUTAJ ZAPYTANIE(mongoDB?)";
   return result;
 };

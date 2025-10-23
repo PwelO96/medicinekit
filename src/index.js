@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import userRoutes from "./routes/userRoutes.js";
+import userRoutes from "./routes/medicineRoutes.js";
 import medicineRouters from "./routes/medicineRouters.js";
 import errorHandling from "./middlewares/errorHandler.js";
 
