@@ -1,4 +1,11 @@
 import express from "express";
+import {
+  getAllMedicines,
+  createMedicine,
+  getMedicineById,
+  updateMedicine,
+  deleteMedicine,
+} from "../controllers/medicineController.js";
 
 const router = express.Router();
 
