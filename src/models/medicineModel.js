@@ -8,11 +8,12 @@ export const getAllMedicinesService = async () => {
 export const createMedicineService = async (
   medicine_name,
   quantity,
-  expiration_date
+  expiration_date,
+  user_id
 ) => {
   const result = await pool.query(
-    "INSERT INTO medicines (medicine_name, quantity, expiration_date) VALUES ($1, $2, $3) RETURNING *",
-    [medicine_name, quantity, expiration_date]
+    "INSERT INTO medicines (medicine_name, quantity, expiration_date, user_id) VALUES ($1, $2, $3, $4) RETURNING *",
+    [medicine_name, quantity, expiration_date, user_id]
   );
   return result.rows[0];
 };
