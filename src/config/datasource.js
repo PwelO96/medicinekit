@@ -1,4 +1,8 @@
 import { DataSource } from "typeorm";
+import { Users } from "../entities/Users";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const AppDataSource = new DataSource({
   type: "postgres",
@@ -7,6 +11,9 @@ const AppDataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DATABASE,
+  entities: [Users],
+  synchronize: true,
+  logging: true,
 });
 
 try {
